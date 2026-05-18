@@ -3,7 +3,7 @@ services:
     name: croor-game-support
     env: python
     buildCommand: pip install flask flask-cors requests gunicorn
-    startCommand: gunicorn server:app --bind 0.0.0.0:$PORT
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
     envVars:
       - key: BOT_TOKEN
         sync: false
