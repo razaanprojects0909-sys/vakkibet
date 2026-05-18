@@ -3,7 +3,7 @@ services:
     name: croor-game-support
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn backend.server:app
+    startCommand: gunicorn server:app --bind 0.0.0.0:$PORT
     envVars:
       - key: BOT_TOKEN
         sync: false
