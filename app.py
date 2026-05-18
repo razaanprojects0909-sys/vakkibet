@@ -7,8 +7,8 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-CHAT_ID = os.environ.get("CHAT_ID", "")
+BOT_TOKEN = os.environ.get("8715762711:AAFv8BBkpfckElBRAUjq6wL2Jiw1e5_NfdE", "")
+CHAT_ID = os.environ.get("-1003662110138", "")
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
 
