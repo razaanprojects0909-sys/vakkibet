@@ -8,7 +8,7 @@
 const CONFIG = {
     // Render pe deploy hone ke baad apna URL daalo
     // Example: https://croor-game-support.onrender.com/submit
-    BACKEND_URL: 'https://croor-game-support.onrender.com/submit',
+    BACKEND_URL: 'https://croor-game-support.onrender.comsubmit',
     STORAGE_KEY: 'croor_game_submissions',
 };
 
