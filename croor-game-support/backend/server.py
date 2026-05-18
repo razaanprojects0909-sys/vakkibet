@@ -18,8 +18,8 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 # CONFIGURATION - Environment Variables from Render
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8715762711:AAFv8BBkpfckElBRAUjq6wL2Jiw1e5_NfdE")
-CHAT_ID = os.environ.get("CHAT_ID", "-1003662110138")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
+CHAT_ID = os.environ.get("CHAT_ID", "YOUR_CHAT_ID_HERE")
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
 
