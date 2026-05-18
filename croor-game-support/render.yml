@@ -1,5 +1,11 @@
-1. GitHub repo me render.yaml pe click karo
-2. Pencil icon (Edit) dabao
-3. Poora code delete karo
-4. Ye naya code paste karo
-5. "Commit changes" dabao
+services:
+  - type: web
+    name: croor-game-support
+    env: python
+    buildCommand: pip install flask flask-cors requests gunicorn
+    startCommand: gunicorn server:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: CHAT_ID
+        sync: false
