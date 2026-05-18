@@ -5,21 +5,21 @@ Python Backend Server - Render Ready
 ========================================
 """
 
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
 import os
 from datetime import datetime
 
-app = Flask(__name__, static_folder='../static', static_url_path='/static')
+app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# CONFIGURATION - Environment Variables from Render
+# CONFIGURATION - Environment Variables
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
-CHAT_ID = os.environ.get("CHAT_ID", "YOUR_CHAT_ID_HERE")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+CHAT_ID = os.environ.get("CHAT_ID", "")
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
 
